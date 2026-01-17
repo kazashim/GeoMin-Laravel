@@ -353,7 +353,7 @@ The MIT License (MIT). Please see [LICENSE](LICENSE) file for more information.
 **Kazashim Kuzasuwat**
 
 - [GitHub](https://github.com/kazashim)
-- [Email](mailto:kazashim@example.com)
+- [Email](mailto:kazashimkuzasuwat@gmail.com)
 
 ## Links
 
