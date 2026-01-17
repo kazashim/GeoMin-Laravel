@@ -1,0 +1,71 @@
+{
+    "name": "geomin/geomin-laravel",
+    "description": "Laravel geophysics library for satellite-based mining activity detection and mineral identification",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kazashim Kuzasuwat",
+            "email": "kazashim@example.com"
+        }
+    ],
+    "homepage": "https://github.com/kazashim/GeoMin-Laravel",
+    "support": {
+        "issues": "https://github.com/kazashim/GeoMin-Laravel/issues",
+        "source": "https://github.com/kazashim/GeoMin-Laravel"
+    },
+    "require": {
+        "php": "^8.1|^8.2",
+        "laravel/framework": "^10.0|^11.0",
+        "guzzlehttp/guzzle": "^7.0",
+        "rubix/ml": "^2.0",
+        "php-ffmpeg/php-ffmpeg": "^1.0",
+        "league/flysystem": "^3.0",
+        "symfony/yaml": "^6.0|^7.0",
+        "ext-json": "*",
+        "ext-curl": "*",
+        "ext-gd": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.0|^11.0",
+        "mockery/mockery": "^1.6",
+        "orchestra/testbench": "^8.0|^9.0",
+        "phpstan/phpstan": "^1.10"
+    },
+    "autoload": {
+        "psr-4": {
+            "GeoMin\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "GeoMin\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "GeoMin\\Providers\\GeoMinServiceProvider"
+            ],
+            "facades": [
+                "GeoMin\\Facades\\GeoMin",
+                "GeoMin\\Facades\\STACClient",
+                "GeoMin\\Facades\\AnomalyDetector",
+                "GeoMin\\Facades\\Mineralogy"
+            ]
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "analyze": "phpstan analyze src --level=5"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true,
+        "allow-plugins": {
+            "php-http/discovery": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
